@@ -17,6 +17,11 @@ namespace _07LabExer_Event
         private SqlConnection sqlConnection;
         private SqlCommand sqlCommand;  
 
+        private ClubRegistrationQuery clubRegistrationQuery;
+        private int ID, Age, count;
+        private string FirstName, MiddleName, LastName, Gender, Program;
+        private long StudentId;
+
         public FrmClubRegistration()
         {
             InitializeComponent();
