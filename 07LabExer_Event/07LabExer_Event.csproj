@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassClubRegistrationQuery.cs" />
     <Compile Include="FrmClubRegistration.cs">
       <SubType>Form</SubType>
     </Compile>

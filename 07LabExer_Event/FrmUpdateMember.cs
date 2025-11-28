@@ -17,6 +17,8 @@ namespace _07LabExer_Event
             InitializeComponent();
         }
 
+
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -28,6 +30,11 @@ namespace _07LabExer_Event
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmUpdateMember_Load(object sender, EventArgs e)
         {
 
         }

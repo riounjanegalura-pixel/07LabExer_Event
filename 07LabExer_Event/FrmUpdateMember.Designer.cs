@@ -238,6 +238,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmUpdateMember";
             this.Text = "FrmUpdateMember";
+            this.Load += new System.EventHandler(this.FrmUpdateMember_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
