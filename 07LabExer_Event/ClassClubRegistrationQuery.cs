@@ -43,17 +43,15 @@ namespace _07LabExer_Event
 
         public bool DisplayList()
         {
-            { 
-                string ViewClubMembers = "SELECT StudentId, FirstName, MiddleName, LastName, Age, Gender, Program FROM ClubMembers";
+            string ViewClubMembers = "SELECT StudentId, FirstName, MiddleName, LastName, Age, Gender, Program FROM ClubMembers";
 
-                this.sqlAdapter = new SqlDataAdapter(ViewClubMembers, this.sqlConnect);
-                
-                this.dataTable.Clear();    
-                this.sqlAdapter.Fill(this.dataTable);
-                this.bindingSource.DataSource = this.dataTable;
+            this.sqlAdapter = new SqlDataAdapter(ViewClubMembers, this.sqlConnect);
 
-                return true;
-            }
+            this.dataTable.Clear();
+            this.sqlAdapter.Fill(this.dataTable);
+            this.bindingSource.DataSource = this.dataTable;
+
+            return true;
         }
 
     }
