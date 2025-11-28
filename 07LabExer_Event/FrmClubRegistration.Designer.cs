@@ -92,7 +92,6 @@
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "First Name:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -125,7 +124,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(239, 20);
             this.textBox3.TabIndex = 8;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -142,7 +140,6 @@
             this.label6.Size = new System.Drawing.Size(29, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Age:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -238,7 +235,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmClubRegistration";
             this.Text = "FrmUpdateMember";
-            this.Load += new System.EventHandler(this.FrmUpdateMember_Load);
+            this.Load += new System.EventHandler(this.FrmClubRegistration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

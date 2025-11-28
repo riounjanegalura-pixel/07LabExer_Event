@@ -20,6 +20,13 @@ namespace _07LabExer_Event
         private int ID, Age, count;
         private string FirstName, MiddleName, LastName, Gender, Program;
 
+        private void FrmClubRegistration_Load(object sender, EventArgs e)
+        {
+            clubRegistrationQuery = new ClubRegistrationQuery();
+            RefreshListOfClubMembers();
+
+        }
+
         private long StudentId; 
 
         public FrmClubRegistration()
@@ -51,26 +58,6 @@ namespace _07LabExer_Event
             sqlCommand.ExecuteNonQuery();
             sqlConnection.Close();
             return true;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmUpdateMember_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
