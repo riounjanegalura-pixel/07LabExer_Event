@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace _07LabExer_Event
 {
-    public partial class Form1 : Form
+    public partial class FrmClubRegistration : Form
     {
-        public Form1()
+        public FrmClubRegistration()
         {
             InitializeComponent();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
