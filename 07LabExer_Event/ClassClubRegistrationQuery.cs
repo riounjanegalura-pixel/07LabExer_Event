@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace _07LabExer_Event
 {
-    internal class ClassClubRegistrationQuery
+    public class ClubRegistrationQuery
     {
         private SqlConnection sqlConnect;
         private SqlCommand sqlCommand;
         private SqlDataAdapter sqlAdapter;
         private SqlDataReader sqlReader;
+        private string connectionString;
 
         public DataTable dataTable;
         public BindingSource bindingSource;
-
-        private string connectionString;
 
         public string _FirstName;
         public string _MiddleName;
@@ -29,5 +28,17 @@ namespace _07LabExer_Event
         public string _Program;
 
         public int _Age;    
+
+        public ClubRegistrationQuery()
+        {
+            
+            this.connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\YourPath\\ClubDB.mdf\";Integrated Security=True;Connect Timeout=30";
+
+            this.sqlConnect = new SqlConnection(this.connectionString);
+
+            this.dataTable = new DataTable();
+            this.bindingSource = new BindingSource();
+        }
     }
 }
+
