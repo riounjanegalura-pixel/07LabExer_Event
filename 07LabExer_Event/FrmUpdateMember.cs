@@ -14,20 +14,9 @@ namespace _07LabExer_Event
 {
     public partial class FrmUpdateMember : Form
     {
-
-        private void FrmUpdateMember_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public FrmUpdateMember()
         {
             InitializeComponent(); 
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-          
         }
     }
 }
