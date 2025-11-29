@@ -19,6 +19,67 @@ namespace _07LabExer_Event
         private ClubRegistrationQuery clubRegistrationQuery;
         private int ID, Age, count;
         private string FirstName, MiddleName, LastName, Gender, Program;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.ID = RegistrationID();
+
+            if (long.TryParse(txtStudentID.Text, out StudentId))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid Student ID format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (int.TryParse(txtAge.Text, out Age))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Invalid Age format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+
+            this.FirstName = txtFirstName.Text;
+            this.MiddleName = txtMiddleName.Text;
+            this.LastName = txtLastName.Text;
+            this.Gender = cbGender.Text; 
+            this.Program = cbProgram.Text; 
+
+            try
+            {
+                bool isRegistered = clubRegistrationQuery.RegisterStudent(
+                    this.ID,
+                    this.StudentId,
+                    this.FirstName,
+                    this.MiddleName,
+                    this.LastName,
+                    this.Age,
+                    this.Gender,
+                    this.Program
+                );
+
+                if (isRegistered)
+                {
+                    MessageBox.Show("Successfully registered a member.", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    RefreshListOfClubMembers();
+                }
+                else
+                {
+                    MessageBox.Show("Registration failed due to database error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred during registration: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private long StudentId;
 
         private void FrmClubRegistration_Load(object sender, EventArgs e)
