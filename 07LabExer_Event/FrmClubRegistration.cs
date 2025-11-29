@@ -20,7 +20,12 @@ namespace _07LabExer_Event
         private int ID, Age, count;
         private string FirstName, MiddleName, LastName, Gender, Program;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshListOfClubMembers();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             this.ID = RegistrationID();
 
